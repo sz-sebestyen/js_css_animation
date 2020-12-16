@@ -18,13 +18,19 @@ function _load() {
 
 	const root = document.getElementById("root");
 
-	for (const iterator of arr) {
+	for (const it of arr) {
 
+		const e = document.createElement(it.tag);
+		console.log(e);
+
+		e.insertAdjacentHTML("beforeend", it.content);
+		root.insertAdjacentElement("beforeend", e);
+/* 
 		root.insertAdjacentHTML("beforeend", `
-			<${iterator.tag}>${iterator.content}</${iterator.tag}>
-		`);
+			<${it.tag}>${it.content}</${it.tag}>
+		`); */
 
-		console.log(iterator.tag);
+		//console.log(it.tag);
 	}
 
 	
