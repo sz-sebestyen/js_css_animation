@@ -7,14 +7,9 @@ function _load() {
 		},
 		{
 			tag: "p",
-			content: "Lorem ipsum",
+			content: "Front-end developer",
 		},
 	];
-/* 
-	for (let index = 0; index < array.length; index++) {
-		const element = array[index];
-		
-	} */
 
 	const root = document.getElementById("root");
 
@@ -29,10 +24,11 @@ function _load() {
 		root.insertAdjacentHTML("beforeend", `
 			<${it.tag}>${it.content}</${it.tag}>
 		`); */
-
-		//console.log(it.tag);
 	}
 
+	root.addEventListener("click", function (e) {
+		root.classList.toggle("clicked");
+	});
 	
 
 }
